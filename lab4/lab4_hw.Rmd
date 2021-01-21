@@ -134,6 +134,10 @@ homerange %>%
 
 The largest deer is alces. Its common name is moose.
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 **10. As measured by the data, which snake species has the smallest homerange? Show all of your work, please. Look this species up online and tell me about it!** **Snake is found in taxon column**    
 
@@ -144,6 +148,8 @@ homerange %>%
   select(species)
 ```
 The smallest snake species is vermis. According to Wikipedia, (Carphophis) vermis is a species of small, nonvenomous colubrid snake native to the United States.
+
+</div>
 
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences.   
