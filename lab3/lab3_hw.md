@@ -1,7 +1,7 @@
 ---
 title: "Lab 3 Homework"
 author: "Hao Li"
-date: "2021-01-12"
+date: "2021-01-19"
 output:
   html_document: 
     keep_md: yes
@@ -24,6 +24,10 @@ library(tidyverse)
 
 ```r
 ?msleep
+```
+
+```
+## starting httpd help server ... done
 ```
 Updated sleep times and weights were taken from V. M. Savage and G. B. West. A quantitative, theoretical framework for understanding mammalian sleep. Proceedings of the National Academy of Sciences, 104 (3):1051-1056, 2007.
 
