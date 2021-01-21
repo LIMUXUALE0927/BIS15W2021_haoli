@@ -11,7 +11,7 @@
 
 <meta name="author" content="Hao Li" />
 
-<meta name="date" content="2021-01-19" />
+<meta name="date" content="2021-01-20" />
 
 <title>Lab 5 Homework</title>
 
@@ -412,7 +412,7 @@ summary {
 
 <h1 class="title toc-ignore">Lab 5 Homework</h1>
 <h4 class="author">Hao Li</h4>
-<h4 class="date">2021-01-19</h4>
+<h4 class="date">2021-01-20</h4>
 
 </div>
 
@@ -715,24 +715,22 @@ bad &lt;- superhero_info %&gt;%
 ## 1    35</code></pre>
 <p>There are more good guys that are bald.</p>
 <ol start="10" style="list-style-type: decimal">
-<li>Let’s explore who the really “big” superheros are. In the <code>superhero_info</code> data, which have a height over 200 or weight over 300?</li>
+<li>Let’s explore who the really “big” superheros are. In the <code>superhero_info</code> data, which have a height over 300 or weight over 450?</li>
 </ol>
 <pre class="r"><code>superhero_info %&gt;% 
-  filter(height &gt; 200 | weight &gt; 300)</code></pre>
-<pre><code>## # A tibble: 65 x 10
-##    name  gender eye_color race  hair_color height publisher skin_color alignment
-##    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    
-##  1 A-Bo… Male   yellow    Human No Hair       203 Marvel C… &lt;NA&gt;       good     
-##  2 Abom… Male   green     Huma… No Hair       203 Marvel C… &lt;NA&gt;       bad      
-##  3 Alien Male   &lt;NA&gt;      Xeno… No Hair       244 Dark Hor… black      bad      
-##  4 Amazo Male   red       Andr… &lt;NA&gt;          257 DC Comics &lt;NA&gt;       bad      
-##  5 Ant-… Male   blue      Human Blond         211 Marvel C… &lt;NA&gt;       good     
-##  6 Anti… Male   blue      Symb… Blond         229 Marvel C… &lt;NA&gt;       &lt;NA&gt;     
-##  7 Apoc… Male   red       Muta… Black         213 Marvel C… grey       bad      
-##  8 Bane  Male   &lt;NA&gt;      Human &lt;NA&gt;          203 DC Comics &lt;NA&gt;       bad      
-##  9 Beta… Male   &lt;NA&gt;      &lt;NA&gt;  No Hair       201 Marvel C… &lt;NA&gt;       good     
-## 10 Bloo… Female blue      Human Brown         218 Marvel C… &lt;NA&gt;       bad      
-## # … with 55 more rows, and 1 more variable: weight &lt;dbl&gt;</code></pre>
+  filter(height &gt; 300 | weight &gt; 4400)</code></pre>
+<pre><code>## # A tibble: 8 x 10
+##   name  gender eye_color race  hair_color height publisher skin_color alignment
+##   &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    
+## 1 Fin … Male   red       Kaka… No Hair      975  Marvel C… green      good     
+## 2 Gala… Male   black     Cosm… Black        876  Marvel C… &lt;NA&gt;       neutral  
+## 3 Groot Male   yellow    Flor… &lt;NA&gt;         701  Marvel C… &lt;NA&gt;       good     
+## 4 MODOK Male   white     Cybo… Brownn       366  Marvel C… &lt;NA&gt;       bad      
+## 5 Onsl… Male   red       Muta… No Hair      305  Marvel C… &lt;NA&gt;       bad      
+## 6 Sasq… Male   red       &lt;NA&gt;  Orange       305  Marvel C… &lt;NA&gt;       good     
+## 7 Wolf… Female green     &lt;NA&gt;  Auburn       366  Marvel C… &lt;NA&gt;       good     
+## 8 Ymir  Male   white     Fros… No Hair      305. Marvel C… white      good     
+## # … with 1 more variable: weight &lt;dbl&gt;</code></pre>
 <ol start="11" style="list-style-type: decimal">
 <li>Just to be clear on the <code>|</code> operator, have a look at the superheros over 300 in height…</li>
 </ol>
@@ -767,6 +765,7 @@ bad &lt;- superhero_info %&gt;%
 ## 7 Sasq… Male   red       &lt;NA&gt;  Orange      305   Marvel C… &lt;NA&gt;       good     
 ## 8 Wolf… Female green     &lt;NA&gt;  Auburn      366   Marvel C… &lt;NA&gt;       good     
 ## # … with 1 more variable: weight &lt;dbl&gt;</code></pre>
+<p>Because there are some superheros with both height &gt; 300 and weight &gt; 450.</p>
 </div>
 <div id="height-to-weight-ratio" class="section level2">
 <h2>Height to Weight Ratio</h2>

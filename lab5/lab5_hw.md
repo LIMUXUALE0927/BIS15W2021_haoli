@@ -1,7 +1,7 @@
 ---
 title: "Lab 5 Homework"
 author: "Hao Li"
-date: "2021-01-19"
+date: "2021-01-20"
 output:
   html_document: 
     keep_md: yes
@@ -387,28 +387,26 @@ bad %>%
 There are more good guys that are bald.
 
 
-10. Let's explore who the really "big" superheros are. In the `superhero_info` data, which have a height over 200 or weight over 300?
+10. Let's explore who the really "big" superheros are. In the `superhero_info` data, which have a height over 300 or weight over 450?
 
 ```r
 superhero_info %>% 
-  filter(height > 200 | weight > 300)
+  filter(height > 300 | weight > 4400)
 ```
 
 ```
-## # A tibble: 65 x 10
-##    name  gender eye_color race  hair_color height publisher skin_color alignment
-##    <chr> <chr>  <chr>     <chr> <chr>       <dbl> <chr>     <chr>      <chr>    
-##  1 A-Bo… Male   yellow    Human No Hair       203 Marvel C… <NA>       good     
-##  2 Abom… Male   green     Huma… No Hair       203 Marvel C… <NA>       bad      
-##  3 Alien Male   <NA>      Xeno… No Hair       244 Dark Hor… black      bad      
-##  4 Amazo Male   red       Andr… <NA>          257 DC Comics <NA>       bad      
-##  5 Ant-… Male   blue      Human Blond         211 Marvel C… <NA>       good     
-##  6 Anti… Male   blue      Symb… Blond         229 Marvel C… <NA>       <NA>     
-##  7 Apoc… Male   red       Muta… Black         213 Marvel C… grey       bad      
-##  8 Bane  Male   <NA>      Human <NA>          203 DC Comics <NA>       bad      
-##  9 Beta… Male   <NA>      <NA>  No Hair       201 Marvel C… <NA>       good     
-## 10 Bloo… Female blue      Human Brown         218 Marvel C… <NA>       bad      
-## # … with 55 more rows, and 1 more variable: weight <dbl>
+## # A tibble: 8 x 10
+##   name  gender eye_color race  hair_color height publisher skin_color alignment
+##   <chr> <chr>  <chr>     <chr> <chr>       <dbl> <chr>     <chr>      <chr>    
+## 1 Fin … Male   red       Kaka… No Hair      975  Marvel C… green      good     
+## 2 Gala… Male   black     Cosm… Black        876  Marvel C… <NA>       neutral  
+## 3 Groot Male   yellow    Flor… <NA>         701  Marvel C… <NA>       good     
+## 4 MODOK Male   white     Cybo… Brownn       366  Marvel C… <NA>       bad      
+## 5 Onsl… Male   red       Muta… No Hair      305  Marvel C… <NA>       bad      
+## 6 Sasq… Male   red       <NA>  Orange       305  Marvel C… <NA>       good     
+## 7 Wolf… Female green     <NA>  Auburn       366  Marvel C… <NA>       good     
+## 8 Ymir  Male   white     Fros… No Hair      305. Marvel C… white      good     
+## # … with 1 more variable: weight <dbl>
 ```
 
 11. Just to be clear on the `|` operator,  have a look at the superheros over 300 in height...
@@ -454,6 +452,8 @@ superhero_info %>%
 ## 8 Wolf… Female green     <NA>  Auburn      366   Marvel C… <NA>       good     
 ## # … with 1 more variable: weight <dbl>
 ```
+Because there are some superheros with both height > 300 and weight > 450.
+
 
 ## Height to Weight Ratio
 13. It's easy to be strong when you are heavy and tall, but who is heavy and short? Which superheros have the lowest height to weight ratio?

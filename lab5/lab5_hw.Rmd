@@ -122,10 +122,10 @@ bad %>%
 There are more good guys that are bald.
 
 
-10. Let's explore who the really "big" superheros are. In the `superhero_info` data, which have a height over 200 or weight over 300?
+10. Let's explore who the really "big" superheros are. In the `superhero_info` data, which have a height over 300 or weight over 450?
 ```{r}
 superhero_info %>% 
-  filter(height > 200 | weight > 300)
+  filter(height > 300 | weight > 4400)
 ```
 
 11. Just to be clear on the `|` operator,  have a look at the superheros over 300 in height...
@@ -139,6 +139,8 @@ superhero_info %>%
 superhero_info %>% 
   filter(weight > 450)
 ```
+Because there are some superheros with both height > 300 and weight > 450.
+
 
 ## Height to Weight Ratio
 13. It's easy to be strong when you are heavy and tall, but who is heavy and short? Which superheros have the lowest height to weight ratio?
