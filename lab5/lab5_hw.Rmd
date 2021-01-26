@@ -100,6 +100,10 @@ tabyl(good, race)
 good %>% 
   filter(race == "Asgardian")
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 8. Among the bad guys, who are the male humans over 200 inches in height?
 ```{r}
@@ -107,6 +111,7 @@ bad %>%
   filter(gender == "Male") %>% 
   filter(height > 200)
 ```
+</div>
 
 9. OK, so are there more good guys or bad guys that are bald (personal interest)?
 ```{r}
@@ -121,12 +126,17 @@ bad %>%
 ```
 There are more good guys that are bald.
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 10. Let's explore who the really "big" superheros are. In the `superhero_info` data, which have a height over 300 or weight over 450?
 ```{r}
 superhero_info %>% 
   filter(height > 300 | weight > 4400)
 ```
+</div>
 
 11. Just to be clear on the `|` operator,  have a look at the superheros over 300 in height...
 ```{r}
