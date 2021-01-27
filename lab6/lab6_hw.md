@@ -1,7 +1,7 @@
 ---
 title: "Lab 6 Homework"
 author: "Hao Li"
-date: "2021-01-26"
+date: "2021-01-27"
 output:
   html_document: 
     keep_md: yes
@@ -348,10 +348,6 @@ fisheries_tidy %>%
 ```
 Morocco caught the most sardines between 1990-2000.
 
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
-</style>
-<div class = "blue">
 
 8. Which five countries caught the most cephalopods between 2008-2012?
 
@@ -387,7 +383,7 @@ fisheries_tidy %>%
 ```
 The five countries are India, China, Spain, Algeria, and France.
 
-</div>
+
 
 9. Which species had the highest catch total between 2008-2012? (hint: Osteichthyes is not a species)
 
