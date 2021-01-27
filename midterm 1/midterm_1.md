@@ -224,7 +224,7 @@ data$LandUse <- as.factor(data$LandUse)
 
 ```r
 data %>% 
-  filter(HuntCat == "Moderate" | HuntCat == "High") %>% 
+  filter(HuntCat == "Moderate") %>% 
   summarise(avg_bird_diversity = mean(Diversity_BirdSpecies), avg_mammal_diversity = mean(Diversity_MammalSpecies))
 ```
 
@@ -232,7 +232,21 @@ data %>%
 ## # A tibble: 1 x 2
 ##   avg_bird_diversity avg_mammal_diversity
 ##                <dbl>                <dbl>
-## 1               1.64                 1.71
+## 1               1.62                 1.68
+```
+
+
+```r
+data %>% 
+  filter(HuntCat == "High") %>% 
+  summarise(avg_bird_diversity = mean(Diversity_BirdSpecies), avg_mammal_diversity = mean(Diversity_MammalSpecies))
+```
+
+```
+## # A tibble: 1 x 2
+##   avg_bird_diversity avg_mammal_diversity
+##                <dbl>                <dbl>
+## 1               1.66                 1.74
 ```
 
 
@@ -286,4 +300,5 @@ data %>%
 ## 2 Neither                      2.36
 ## 3 Park                         2.43
 ```
+
 

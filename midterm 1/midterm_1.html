@@ -539,12 +539,19 @@ R is an open-source programming language (which is very useful and efficient in 
 data$LandUse &lt;- as.factor(data$LandUse)</code></pre>
 <p><strong>10. (4 points) For the transects with high and moderate hunting intensity, how does the average diversity of birds and mammals compare?</strong></p>
 <pre class="r"><code>data %&gt;% 
-  filter(HuntCat == &quot;Moderate&quot; | HuntCat == &quot;High&quot;) %&gt;% 
+  filter(HuntCat == &quot;Moderate&quot;) %&gt;% 
   summarise(avg_bird_diversity = mean(Diversity_BirdSpecies), avg_mammal_diversity = mean(Diversity_MammalSpecies))</code></pre>
 <pre><code>## # A tibble: 1 x 2
 ##   avg_bird_diversity avg_mammal_diversity
 ##                &lt;dbl&gt;                &lt;dbl&gt;
-## 1               1.64                 1.71</code></pre>
+## 1               1.62                 1.68</code></pre>
+<pre class="r"><code>data %&gt;% 
+  filter(HuntCat == &quot;High&quot;) %&gt;% 
+  summarise(avg_bird_diversity = mean(Diversity_BirdSpecies), avg_mammal_diversity = mean(Diversity_MammalSpecies))</code></pre>
+<pre><code>## # A tibble: 1 x 2
+##   avg_bird_diversity avg_mammal_diversity
+##                &lt;dbl&gt;                &lt;dbl&gt;
+## 1               1.66                 1.74</code></pre>
 <p><strong>11. (4 points) One of the conclusions in the study is that the relative abundance of animals drops off the closer you get to a village. Let’s try to reconstruct this (without the statistics). How does the relative abundance (RA) of apes, birds, elephants, monkeys, rodents, and ungulates compare between sites that are less than 5km from a village to sites that are greater than 20km from a village? The variable <code>Distance</code> measures the distance of the transect from the nearest village. Hint: try using the <code>across</code> operator.</strong></p>
 <pre class="r"><code>data %&gt;% 
   filter(Distance &lt; 5) %&gt;% 

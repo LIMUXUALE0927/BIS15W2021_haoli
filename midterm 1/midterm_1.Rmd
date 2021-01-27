@@ -106,7 +106,13 @@ data$LandUse <- as.factor(data$LandUse)
 **10. (4 points) For the transects with high and moderate hunting intensity, how does the average diversity of birds and mammals compare?**
 ```{r}
 data %>% 
-  filter(HuntCat == "Moderate" | HuntCat == "High") %>% 
+  filter(HuntCat == "Moderate") %>% 
+  summarise(avg_bird_diversity = mean(Diversity_BirdSpecies), avg_mammal_diversity = mean(Diversity_MammalSpecies))
+```
+
+```{r}
+data %>% 
+  filter(HuntCat == "High") %>% 
   summarise(avg_bird_diversity = mean(Diversity_BirdSpecies), avg_mammal_diversity = mean(Diversity_MammalSpecies))
 ```
 
@@ -131,4 +137,5 @@ data %>%
   summarise(avg_all_species_diversity = mean(Diversity_AllSpecies)) %>% 
   arrange(avg_all_species_diversity)
 ```
+
 
