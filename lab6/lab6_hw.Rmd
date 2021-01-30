@@ -135,6 +135,7 @@ fisheries_tidy %>%
 The five countries are India, China, Spain, Algeria, and France.
 
 
+
 9. Which species had the highest catch total between 2008-2012? (hint: Osteichthyes is not a species)
 ```{r}
 fisheries_tidy %>% 
